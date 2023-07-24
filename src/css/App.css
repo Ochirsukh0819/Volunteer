@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Marck+Script&family=PT+Sans:ital@0;1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+aside {
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #163c85;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #a0bffd;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+.header > h2 {
+  rotate: 8deg;
+}
+.header > picture > img {
+  width: 2.5rem;
+}
+
+nav > ul {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+nav > ul > li {
+  list-style: none;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  color: #a0bffd;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+nav > ul > li > a > .icon {
+  font-size: 30px;
+}
+
+nav > ul > li:hover {
+  color: white;
+}
+
+main {
+  width: 90%;
+}
+
+.content {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.tab-nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.tab-nav ul li {
+  list-style: none;
+  cursor: pointer;
+  color: #9299a6;
+  font-size: 1.5rem;
+}
+
+.tab1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 1rem 1rem;
+  width: 44rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.tab1 h2 {
+  display: flex;
+  align-self: start;
+  font-size: 1rem;
+  color: #2b3954;
+}
+.votes {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.tab1 button {
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  color: white;
+  background-color: #163c85;
+  cursor: pointer;
+}
+
+.model {
+  width: 110%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.model-content {
+  position: absolute;
+  background-color: #163c85;
+  padding: 2rem 2rem;
+}
+
+.staticInput {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.staticInput > .name {
+  grid-column: 1 / span 2;
+}
+
+.staticInput > input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.staticInput > button {
+  padding: 0.5rem 0.5rem;
+  border-radius: 3rem;
+  border: none;
+  color: #163c85;
+  cursor: pointer;
+}
+
+.model-content .closeIcon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.5rem 0.5rem;
+  font-size: 24px;
+  color: #9299a6;
+  cursor: pointer;
+}
+
+.dynamicInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.dynamicInput h2 {
+  display: flex;
+  align-self: start;
+  font-size: 1.2rem;
+  color: white;
+}
+.dynamicInput .inputs {
+  height: 300px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+}
+
+.dynamicInput .inputs > .aa {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.dynamicInput .inputs > .aa > input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.dynamicInput button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.table-container {
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.table-container > table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+th {
+  text-align: left;
+}
+thead {
+  th {
+    background-color: #55608f;
+  }
+}
+
+tbody > tr > td > button {
+  padding: 0.5rem 0.5rem;
+  border-radius: 3rem;
+  border: none;
+  color: #163c85;
+  cursor: pointer;
+}
+
+.list-content {
+  margin: 2rem 2rem;
+}
+
+.search {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+}
+.search > input {
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+}
+.search .search-icon {
+  align-items: center;
+  font-size: 24px;
+  color: #163c85;
+}
+/* vote component */
+.titles {
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titles .times {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.titles > h2 {
+  font-weight: 400;
+  font-size: 30px;
+  font-family: "PT Sans", sans-serif;
+}
+
+.Candidates {
+  width: 100%;
+  margin: 3rem 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  overflow-x: scroll;
+}
+.Candidates article {
+  padding: 1rem 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.Candidates article > picture > img {
+  width: 12rem;
+  border-radius: 2rem;
+}
+.Candidates article > h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #2a2a2a;
+  font-family: "PT Sans", sans-serif;
+}
+.Candidates article > h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #2a2a2a;
+  font-family: "PT Sans", sans-serif;
+}
+
+.Candidates article > p {
+  margin: 1rem 1rem;
+  font-family: "PT Sans", sans-serif;
+}
+.giveVote {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.giveVote > h2 {
+  margin: 0rem 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-family: "PT Sans", sans-serif;
+}
+
+.giveVote > select {
+  padding: 0.5rem 1rem;
+}
+
+.buttonVote {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonVote > button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 2.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  color: white;
+  background-color: #163c85;
+  cursor: pointer;
+}
